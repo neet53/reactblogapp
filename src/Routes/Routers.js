@@ -1,5 +1,5 @@
 // import './Routes.css'
-import { Route, Routes, BrowserRouter} from 'react-router-dom'
+import { Route, Routes, BrowserRouter,} from 'react-router-dom'
 import Home from '../Pages/Home/Home'
 import Index from '../Pages/Bollywood/index'
 import Hollywood from '../Pages/Hollywood'
@@ -18,7 +18,7 @@ const Routers = () =>{
             <Routes>    
 
                 {/* Routes */}
-                <Route path='/' element={<Home/>}/>
+               <Route path='/' element={<Home/>}/>
                 <Route path= "/Bollywood" element= {<Index />} />
                 <Route path= "/Technology" element= {<Technology />} />
                 <Route path= "/Hollywood" element= {<Hollywood />} />

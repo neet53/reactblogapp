@@ -1,7 +1,8 @@
 import '../CSS/page.css'
+import { Link } from 'react-router-dom'
 const RelatedContent = (props) =>{
     return(
-        <div className="related-content">
+        <Link to='/'><div className="related-content">
             {/* <p className="related-content-heading">More From The Siren</p> */}
             <div className="related-content-images">
                 <img src={props.image} alt="Images" className="img"/>
@@ -16,7 +17,7 @@ const RelatedContent = (props) =>{
 
                 </div>
             </div>
-        </div>
+        </div></Link>
     )
 }
 

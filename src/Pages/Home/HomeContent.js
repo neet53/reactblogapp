@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Home.css'
 import { useState, useEffect } from 'react'
 
@@ -30,7 +31,7 @@ const HomeContent = () => {
 
                         <div className='gridimg1'>
                             <div className='title'>{item?.title}</div>
-                            <img src={item?.urlToImage} alt='image1' className='image1' />
+                            <Link to='/Bollywood'><img src={item?.urlToImage} alt='image1' className='image1' /></Link>
                         </div>
                         <div className='fleximg'>
                             {
@@ -38,7 +39,7 @@ const HomeContent = () => {
 
                                     <div className='grid-img2' key={index}>
                                         <div className='title'>{item?.title}</div>
-                                        <img src={item?.urlToImage} alt='image1' className='image2' />
+                                        <Link to='/Bollywood'><img src={item?.urlToImage} alt='image1' className='image2' /></Link>
                                     </div>
 
 
@@ -89,9 +90,9 @@ export function Latestcontent(props) {
             <div id='LC'>
                 {
                     data.slice(0, 3).map((item, index) => (
-                        <div className='' key={index}><img src={item?.urlToImage} alt='image2' className='latestcontentimg' />
-                            <h3>{item?.title}</h3>
-                            <p>{item?.description}</p>
+                        <div className='' key={index}><Link to='/Bollywood'><img src={item?.urlToImage} alt='image2' className='latestcontentimg' /></Link>
+                            <Link to='/Bollywood'><h3>{item?.title}</h3></Link>
+                            <Link to='/Bollywood'><p>{item?.description}</p></Link>
                             <p className='Travel' id='lc'>{item?.source?.name} <span> {item.publishedAt}</span></p>
                         </div>
 
@@ -142,10 +143,10 @@ export function ArticleContent(props) {
                         <div key={index}>
                             <hr className='hr' />
                             <div className='ArticleContent-row' >
-                                <img src={item?.urlToImage} alt='image2' className='ArticleContentimg' />
+                               <Link to='/Bollywood'> <img src={item?.urlToImage} alt='image2' className='ArticleContentimg' /></Link>
                                 <div className='ArticlesContent-column'>
-                                    <h3>{item?.title}</h3>
-                                    <p>{item?.description}</p>
+                                    <Link to='/Bollywood'><h3>{item?.title}</h3></Link>
+                                    <Link to='/Bollywood'><p>{item?.description}</p></Link>
                                     <p className='Travel' id='lc'>{item?.source?.name} <span> {item?.publishedAt}</span></p>
                                 </div>
                             </div>
@@ -190,7 +191,7 @@ export function Posts(props) {
                         <div key={index}>
                             <hr id='post-hr' />
                             <div className='pImg' >
-                                <img src={item?.urlToImage} alt="image3" className='pimg' />
+                                <Link to='/Bollywood'><img src={item?.urlToImage} alt="image3" className='pimg' /></Link>
                                 <div id='AT'>
                                     <p className='title'>{item?.author}</p>
                                     <p className='Travel'>{item?.source?.name} <br /> <span id="travelDate"> {item?.publishedAt}</span></p>

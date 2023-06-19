@@ -1,4 +1,4 @@
-import { useParams, useLocation } from "react-router-dom"
+import { useParams, useLocation, Link } from "react-router-dom"
 import face from '../image/faceLogo.png'
 import insta from '../image/instagram.svg'
 import fb from '../image/facebook.svg'
@@ -17,14 +17,14 @@ const CommonFunction = () =>{
       // fetching data
       <>
         <div id='logo'>
-          <h3 className='therotate'>The</h3>
-          <h1 className='siren'>Siren</h1>
-          <button className="btn">Get Started</button>
+        <h3 className='therotate'>The</h3>
+         <h1 className='siren'>Siren</h1>
+          <Link to='/'><button className="btn">Get Started</button></Link>
         </div>
-  
+
         <div key={data?.id} className="main-Api">
         
-        <h1>{data?.title}</h1>
+         <Link to='/'><h1>{data?.title}</h1></Link>
   
         
         <p className="logo-content">
@@ -40,9 +40,9 @@ const CommonFunction = () =>{
         </p>
                 
         
-        <img src={data?.urlToImage} alt="" id="api-img"/>
+        <Link to='/'><img src={data?.urlToImage} alt="" id="api-img"/></Link>
         
-        <p className="content">{data?.content} Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta harum officia officiis. Voluptatum eum doloremque esse quis magni fuga, accusantium incidunt nam, perspiciatis ut aliquam, voluptas ad alias facilis id?
+        <Link to='/'><p className="content">{data?.content} Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta harum officia officiis. Voluptatum eum doloremque esse quis magni fuga, accusantium incidunt nam, perspiciatis ut aliquam, voluptas ad alias facilis id?
           Expedita dignissimos nihil neque officiis atque perspiciatis cumque veritatis blanditiis nisi, laboriosam accusamus debitis, delectus enim officia molestiae accusantium autem voluptatibus maiores voluptates! Magnam totam asperiores aperiam aliquid, maxime illo!
           Recusandae ipsam voluptate ad enim. Nulla ducimus iusto numquam nesciunt optio est libero! Temporibus iusto vitae ea laborum provident, praesentium distinctio veniam debitis voluptatibus minus sit possimus nisi quis aliquam.
           Perspiciatis perferendis ipsum hic ea tempora blanditiis! Nihil quis cumque officiis expedita. Unde at iusto aliquam sint ipsum labore consequuntur eum dicta placeat obcaecati eveniet corporis nulla similique, vitae accusamus?
@@ -62,22 +62,22 @@ const CommonFunction = () =>{
           Numquam temporibus amet repudiandae maiores, sit ex natus asperiores, saepe cumque hic aliquid iusto optio illum mollitia quia cupiditate aut sed accusantium minus nam explicabo officiis suscipit. Voluptatum, quo sint!
           Incidunt quam optio eius impedit laboriosam numquam alias ipsam, voluptatibus quaerat deleniti repellendus odio porro placeat iure laborum commodi officiis non officia! Sequi omnis, cupiditate quo ex esse sed eaque!
           Blanditiis cum exercitationem sit quam harum error nesciunt voluptatum consectetur expedita ab debitis possimus quaerat saepe illo, quod repellendus natus in deleniti asperiores architecto vero. Iusto, officiis amet? Ex, reprehenderit!
-        </p>
+        </p></Link>
         
-        <h3>Description: {data?.description }</h3>
-        <h4 >FOR MORE INFO CLICK ON BELOW Link: <br/> <br/>
-         <a href={data?.url}>"{data?.url}"</a>
-         </h4>
+        <Link to='/'><h3>Description: {data?.description }</h3></Link>
+        
+         
+         
         
             <hr />
-        <div className="footter">
+        <Link to='/'><div className="footter">
             <img src={face} alt="Logo" className="face-logo"/>
             <div  className="foot-left">
                 <h3>Written By</h3>
                 <span>{data?.author}</span>
                 <span>Jan 28, 2019 · 10 min read</span>
             </div>
-        </div>
+        </div></Link>
             <hr/>
 
         </div>

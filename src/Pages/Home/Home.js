@@ -7,11 +7,12 @@ import png from '../../image/arrow.png'
 import png1 from '../../image/arrow-side.png'
 import './Home.css'
 import Logo from "../../Components/Logo/logo"
+import { Link } from "react-router-dom"
 
 export function Home(props){    
     return(
         <div>
-            <Logo></Logo>
+            <Link to='/CommonFunction'><Logo></Logo></Link>
             <Navbar></Navbar>
             <HomeContent></HomeContent>
             <Subcontent headName = "The Latest"></Subcontent>
@@ -31,7 +32,7 @@ export function Home(props){
                     <div>LOAD MORE</div>
                 </div>
                 <div className='p'>
-                    <img src = {image3} alt=' ' className='postimg' />
+                   <Link to='/Bollywood'><img src = {image3} alt=' ' className='postimg' /></Link> 
                     
                 </div>
             </div>

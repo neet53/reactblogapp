@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 const Common = () =>{
     const [data, setData] = useState([])
 
-    const fetchData = () =>{
-        return fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=90b5566f6c314946a71f7e0be8d307c4')
+    const FetchData = () =>{
+        return Fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=90b5566f6c314946a71f7e0be8d307c4')
                     .then((response)=>{
                         return response.json();
 
@@ -16,7 +16,7 @@ const Common = () =>{
     }
 
     useEffect(() =>{
-        fetchData()
+        FetchData()
     }, [])
 
 
